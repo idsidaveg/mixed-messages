@@ -25,5 +25,34 @@ var quotes = [
     "Old age is like everything else. To make a success of it, you've got to start young. - Theodore Roosevelt"
 ];
 
-const getQuote = () => quotes[Math.floor(Math.random() * (quotes.length + 1))];
+const array1Noun = ["age", "life", "maturity", "old age", "youth", "adolescence", "adulthood", "boyhood", "childhood", "girlhood", "infancy", "senility", "seniority", "middle-age"];
+const array2Noun = ["dotage", "elderliness", "wear and tear"];
+const periodOfTimeNoun = ["century", "date", "day", "era", "generation", "life", "millennium", "aeon", "duration", "epoch", "interim", "interval",
+    "lifetime", "span", "blue moon"
+];
+const becomeOlderVerb = ["deteriorate", "develop", "get along", "grow", "grow up", "mature", "decline", "mellow", "push", "ripen", "ware", "grow feeble", "grow old", "put mileage on"];
+
+const getQuote = () => quotes[Math.floor(Math.random() * (quotes.length))];
 console.log(getQuote());
+
+// this builds the quote
+const buildQuote = () => {
+    let message = "";
+    try {
+        let noun1Position = Math.floor(Math.random() * array1Noun.length);
+        let noun2Position = Math.floor(Math.random() * array2Noun.length);
+        let nounPOT = Math.floor(Math.random() * periodOfTimeNoun.length);
+        let verbBO = Math.floor(Math.random() * becomeOlderVerb.length);
+
+        const noun1 = array1Noun[noun1Position];
+        const noun2 = array2Noun[noun2Position];
+        const noun3 = periodOfTimeNoun[nounPOT];
+        const verb = becomeOlderVerb[verbBO];
+
+        message = `The thing about ${noun1} and ${noun2} is, it may take a ${noun3} to ${verb}!`;
+    } catch (e) {
+        console.log(e);
+    }
+    return message;
+}
+console.log(buildQuote());
