@@ -1,6 +1,6 @@
-#Mixed Messages
+# Mixed Messages
 
-##Plan your Project
+## Plan your Project
 Visualize your end result. What is it built with? What can it do? Make sure that it satisfies all of the project objectives.
 
 Project Requirements:
